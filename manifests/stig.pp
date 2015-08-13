@@ -124,7 +124,7 @@ class postgresql::stig($audit_data_changes = false) {
 # privileges to be sent to the administrators for review.
 
     file { "/etc/cron.monthly/postgresql-privileges-report":
-        owner => root, group => 0, mode => 0700,
+        owner => root, group => 0, mode => '0700',
         source => "puppet:///modules/postgresql/privs-report.sh",
     }
 }
